@@ -7,7 +7,7 @@ Ghost博客的上传图片改为上传到[SM.MS](https://sm.ms/)图床
 ```shell
 cd you_ghost_path\current\core\server\adapters\storage
 # 将本LocalFileStorage.js替换源目录的LocalFileStorage.js
-重新启动ghost
+# 重新启动ghost
 ```
 
 # Down
