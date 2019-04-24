@@ -1,20 +1,23 @@
 # Ghost-smms
-Ghost博客的上传图片改为上传到[SM.MS](https://sm.ms/)图床
+
+Ghost博客的上传图片改为上传到[SM.MS](https://sm.ms/)图床，[演示站](https://kangna.moe/post)
 
 # Installation
-> 由于ghost对于node.js版本要求过于严格，虽说支持10+，但是照着官网写了Storage Adapters插件却无法使用，原因是需要使用8^的node版本，而我的服务器node是10，所以只能更改源码
+
+## 下载 smms-cli
 
 ```shell
-# 在you_ghost_path/content/目录下创建/adapters/storage把LocalFileStorage.js丢进去
-cd you_ghost_pathcontent/adapters/storage
-git clone https://github.com/zhu-zhu/Ghost-smms.git
-restart ghost
+npm install smms-cli -g
 ```
 
-如果放在content/adapters/storage目录下无法使用
+## 更改图床
+
 ```shell
-cd you_ghost_path\current\core\server\adapters\storage
+su { user }
+# 你在ghost目录下创建的用户
+cd you_ghost_path/versions/{ your_ghost_versions }/core/server/adapters/storage/
 # 将本LocalFileStorage.js替换源目录的LocalFileStorage.js
-# 重新启动ghost
+# 重新启动ghost，根据提示启动ghost
 ```
+
 # Down
